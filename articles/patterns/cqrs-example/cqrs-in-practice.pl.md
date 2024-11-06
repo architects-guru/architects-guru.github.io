@@ -1,3 +1,8 @@
+---
+permalink: /blog/cqrs-w-praktyce
+tags: CQRS design-pattern
+---
+
 # CQRS w praktyce
 
 Command/Query Responsibility Segregation a potocznie po prostu CQRS to wzorzec projektowy, który jak sama nazwa na to wskazuje, wprowawdza pewną segregację odpowiedzialności:
