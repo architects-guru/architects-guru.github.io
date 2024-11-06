@@ -1,7 +1,7 @@
 title: [Architects.guru]
-description: [Celem Architects.guru jest budowanie wysokiej jakości oprogramowania]
+description: [Buduj wysokiej jakości oprogramowanie]
 show_downloads: [false]
 google_analytics: [G-F5QKELK8MV]
 remote_theme: pages-themes/architect@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme
