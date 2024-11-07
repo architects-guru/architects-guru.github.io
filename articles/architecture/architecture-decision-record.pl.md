@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dokumentowanie decyzji architektonicznych (ADR-y)
-permalink: 
+permalink: /blog/architektura/dokumentowanie-decyzji-architektonicznych-adr
 tags: 
 - ADR 
 - achitecture
