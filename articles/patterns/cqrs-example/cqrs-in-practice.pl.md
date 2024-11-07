@@ -1,16 +1,19 @@
 ---
 permalink: /blog/cqrs-w-praktyce
-tags: CQRS design-pattern
+tags: 
+- CQRS 
+- design-pattern
+title: CQRS w praktyce
 ---
 
 # CQRS w praktyce
 
-Command/Query Responsibility Segregation a potocznie po prostu CQRS to wzorzec projektowy, który jak sama nazwa na to wskazuje, wprowawdza pewną segregację odpowiedzialności:
+Command/Query Responsibility Segregation a potocznie po prostu CQRS to wzorzec projektowy, który wprowawdza pewną segregację odpowiedzialności:
 
 ![preview.jpg](preview.jpg)
 
-- rozkazów (ang. command) – dla operacji które modyfikują dane
-- zapytań (ang. query) – dla operacji które odczytują dane
+- rozkazów (ang. *commands*) – dla operacji które modyfikują dane
+- zapytań (ang. *queries*) – dla operacji które odczytują dane
 
 W procesie zapisu zazwyczaj mamy walidację danych, dodatkową logikę domenową, a wreszcie zapis może być do zupełnie innych systemów danych niż odczyt (np. baza obiektowa – zapis, baza relacyjna – odczyt). Modele (struktury) wyglądają inaczej – np. przy zapisie posługujemy się identyfikatorami, a przy odczycie nazwami, możemy też pobierać np. dodatkowe dane audytowe. Wreszcie proces odczytu zazwyczaj zoptymalizowany jest pod zupełnie inne kryteria niż zapis, różne też mogą być wymagania biznesowe – w jednym przypadku chcemy mieć efektywny odczyt (miliony requestów), zapis jest sporadyczny, a w innym przypadku szczególny nacisk chcemy położyć na szybkość zapisu, a odczyt jest bardzo nieregularny. Z powodu tych różnic CQRS zakłada, że te operacje powinny być odseparowane.
 
@@ -212,7 +215,8 @@ class GetProductHandler : QueryHandler<GetProduct, Product>
 }
 ```
 
-Model CreateProduct stał się komendą, a serwis ProductCreationService stał się handlerem dla tej komendy. Serwis ProductAvailabilityService oraz ProductProjections zostały przekształcone w query IsProductAvailable oraz GetProduct.
+Model *CreateProduct* stał się komendą, a serwis *ProductCreationService* stał się handlerem dla tej komendy. 
+Serwis *ProductAvailabilityService* oraz *ProductProjections* zostały przekształcone w query *IsProductAvailable* oraz *GetProduct*.
 
 ### Konkluzja
 Przykład z naszej domeny potwierdza, że:
@@ -223,9 +227,9 @@ Przykład z naszej domeny potwierdza, że:
 - Projekcje – różne ujęcia odczytu danych, grupowanie, itp będę powodowały konieczność tworzenia nowych modeli
 
 ### Jakie są zyski?
-Z CQRSem wiąże się wzorzec mediatora – dla command i query dostarczamy jednolite interfejsy, a command i query wykonujemy poprzez instancję mediatora. Zmniejsza to coupling pomiędzy obiektami, ponieważ wiedzą one tylko o instancji mediatora.
+Z CQRSem wiąże się wzorzec mediatora – dla command i query dostarczamy jednolite interfejsy, a command i query wykonujemy poprzez instancję mediatora. Zmniejsza to *coupling* pomiędzy obiektami, ponieważ wiedzą one tylko o instancji mediatora.
 
-Zatem powyższe wywołania zamiast wyglądać tak: CreateProductHandler(new CreateProduct()) mogą wyglądać tak: Mediator.Send(new CreateProduct()).
+Zatem powyższe wywołania zamiast wyglądać tak: `CreateProductHandler(new CreateProduct())` mogą wyglądać tak: `Mediator.Send(new CreateProduct())`.
 
 Kolejnym zyskiem jest łatwość testowania poszczególnych command i query. Dostarczamy tylko niezbęne zależności i testujemy jedną odpowiedzialność w ramach danego command/query.
 
@@ -234,4 +238,4 @@ Kolejnym zyskiem jest łatwość testowania poszczególnych command i query. Dos
 CQRS jak wszystko ma swoje wady, np. wprowadza dodatkową złożoność. Zatem wszędzie tam gdzie mamy systemy tpu CRUD pchanie na siłę CQRS nie ma wg mnie sensu. Zależnie od przyjętej konwencji organizacji kodu, może wprowadzać dodatkowe zamieszenie – na początek zalecałbym stosowanie konwencji: komenda/query i handler w tym samym pliku.
 
 ### Przykład implementacji
-.NET – MediatR https://github.com/jbogard/MediatR
+.NET – [MediatR](https://github.com/jbogard/MediatR)
