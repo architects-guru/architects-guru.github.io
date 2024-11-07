@@ -17,23 +17,14 @@
 
     {% include head-custom.html %}
     <style>
-        body{
-            position: relative;
-        }
-        
-        body::after {
-            content: '';
-            display: block;
-            height: 50px; /* set same as footer's height */
+        #content-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            height: 50px;
+            flex: 1;
         }
     </style>
 </head>
