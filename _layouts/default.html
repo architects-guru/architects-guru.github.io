@@ -17,12 +17,19 @@
 
     {% include head-custom.html %}
     <style>
+        body::after {
+            content: '';
+            display: block;
+            height: 50px; /* set same as footer's height */
+        }
+
         footer {
-            position: fixed;
+            position: absolute;
             left: 0;
             bottom: 0;
             width: 100%;
             text-align: center;
+            height: 50px;
         }
     </style>
 </head>
