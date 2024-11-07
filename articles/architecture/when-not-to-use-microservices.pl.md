@@ -1,10 +1,16 @@
 ---
 layout: default
+title: Kiedy nie warto budować architektury w oparciu o mikroserwisy?
+permalink: /blog/architektura/kiedy-nie-warto-budowac-w-oparciu-o-mikroserwisy
+tags: 
+- microservices 
+- achitecture
 ---
 
 # Kiedy nie warto budować architektury w oparciu o mikroserwisy?
 
 W ostatnich latach *mikroserwisy* zyskały dużą popularność dzięki wielu zaletom, a do najważniejszych należą:
+
 - skalowalność - selektywna zmiana zasobów, np. liczby instancji konkretnych serwisów i ich zależności (np. baz danych)
 - optymalizacja kosztów - szczególnie w usługach typu cloud
 - elastyczność - wdrażanie poszczególnych składowych systemu (serwisów), rozproszony development
