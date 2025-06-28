@@ -16,6 +16,9 @@ https://bettersoftwaredesign.pl/podcast/o-architectural-kata-i-procesie-projekto
 # Decoupling
 https://thenewstack.io/how-decoupling-can-help-you-write-better-software/
 
+# Documentation
+https://herbertograca.com/2019/08/12/documenting-software-architecture/?ref=blog.pragmaticengineer.com
+
 # Design patterns
 https://refactoring.guru
 
