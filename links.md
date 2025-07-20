@@ -16,6 +16,9 @@ https://www.neverletdown.net/2014/10/architectural-drivers.html
 https://www.solutionarchitects.com.au/hands-on-architect-the-oxymoron/
 https://bettersoftwaredesign.pl/podcast/o-architectural-kata-i-procesie-projektowania-architektury-z-piotrem-filipowiczem/
 
+# Clean architecture
+https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
 # Decoupling
 https://thenewstack.io/how-decoupling-can-help-you-write-better-software/
 
