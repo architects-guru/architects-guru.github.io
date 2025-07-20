@@ -41,3 +41,9 @@ https://www.milanjovanovic.tech/blog/introduction-to-distributed-tracing-with-op
 
 
 https://particular.net/adsd?utm_source=announcement&utm_medium=email
+
+
+# Transactional outbox
+https://microservices.io/patterns/data/transactional-outbox.html
+
+
