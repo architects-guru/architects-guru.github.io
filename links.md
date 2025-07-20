@@ -9,6 +9,9 @@ https://blogs.microsoft.com/blog/2025/05/19/microsoft-build-2025-the-age-of-ai-a
 # Architecture
 https://github.com/nocomplexity/ArchitecturePlaybook/blob/master/introduction.md
 
+# Architectural drivers
+https://www.neverletdown.net/2014/10/architectural-drivers.html
+
 # Architect role
 https://www.solutionarchitects.com.au/hands-on-architect-the-oxymoron/
 https://bettersoftwaredesign.pl/podcast/o-architectural-kata-i-procesie-projektowania-architektury-z-piotrem-filipowiczem/
