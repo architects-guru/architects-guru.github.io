@@ -4,3 +4,5 @@ title: Architects.guru - Architecture playbook
 description: "At the end of the day, it’s the code that knows the most about your business"
 show_downloads: false
 google_analytics: G-F5QKELK8MV
+plugins:
+  - jekyll-seo-tag
