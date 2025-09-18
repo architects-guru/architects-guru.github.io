@@ -1,3 +1,5 @@
+theme: null
+markdown: kramdown
 title: Architects.guru - Architecture playbook
 description: "At the end of the day, it’s the code that knows the most about your business"
 show_downloads: false
